@@ -1,5 +1,8 @@
 # Changelog - plg_system_fgadminpagecustom
 
+## 1.4.3 (2026-11-19)
+- FIX: "Open first submenu item" did not react in the Phoca Top Menu when the click landed on the row (the `<li>`) next to the link text instead of on the link itself. A click on the whole parent row now opens the first submenu item; clicks inside the nested submenu are left alone.
+
 ## 1.4.2 (2026-11-19)
 - FIX: "Open first submenu item" did nothing in the standard Atum sidebar, because Atum's component parents carry a real link (`index.php?option=...`) instead of `#`. Parent items are now recognized by their toggle (`has-arrow` / `data-bs-toggle`), so both the Atum sidebar and the Phoca Top Menu work.
 

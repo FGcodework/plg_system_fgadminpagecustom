@@ -2,7 +2,7 @@
 
 /**
  * @package     plg_system_fgadminpagecustom
- * @version     1.4.2
+ * @version     1.4.3
  * @license     GNU General Public License version 2 or later
  *
  * Small admin-side script: a click on a component's parent menu item
@@ -47,16 +47,18 @@ final class MenuScript
     // Touch devices keep the plain expand behaviour (no way to reach the other items otherwise).
     if (window.matchMedia && window.matchMedia('(hover: none)').matches) { return; }
 
+    // The click may land on the link or on the padding of its <li> (Phoca flyout rows).
     var a = e.target.closest('a');
-    if (!a || !a.closest(MENU)) { return; }
+    var li = a ? a.closest('li') : e.target.closest('li');
+    if (!li || !li.closest(MENU)) { return; }
+    if (!a) { a = li.querySelector(':scope > a'); }
+    if (!a || a.closest('li') !== li) { return; }
+
     // Parent toggles only: Phoca uses href="#" + data-bs-toggle, Atum a.has-arrow (with a real href).
     if (!a.classList.contains('has-arrow') && !a.hasAttribute('data-bs-toggle')) { return; }
 
-    var li = a.closest('li');
-    if (!li || li.querySelector(':scope > a') !== a) { return; }
-
     var sub = li.querySelector(':scope > ul');
-    if (!sub) { return; }
+    if (!sub || sub.contains(e.target)) { return; }
 
     // Only direct children of the top-level "Components" item (identified by its puzzle icon).
     var top = li.parentElement ? li.parentElement.closest('li') : null;
