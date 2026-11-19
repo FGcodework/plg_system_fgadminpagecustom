@@ -2,7 +2,7 @@
 
 /**
  * @package     plg_system_fgadminpagecustom
- * @version     1.4.1
+ * @version     1.4.2
  * @license     GNU General Public License version 2 or later
  */
 

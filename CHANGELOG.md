@@ -1,5 +1,8 @@
 # Changelog - plg_system_fgadminpagecustom
 
+## 1.4.2 (2026-11-19)
+- FIX: "Open first submenu item" did nothing in the standard Atum sidebar, because Atum's component parents carry a real link (`index.php?option=...`) instead of `#`. Parent items are now recognized by their toggle (`has-arrow` / `data-bs-toggle`), so both the Atum sidebar and the Phoca Top Menu work.
+
 ## 1.4.1 (2026-11-19)
 - NEW: option "Open first submenu item" (Behavior tab, off by default). A click on a component in the Components menu opens its first submenu item directly, as in Joomla 3.10. Works in the Atum sidebar and in the Phoca Top Menu module; it only affects direct children of the Components item, ignores modified clicks (Ctrl/Shift/middle button) and leaves touch devices on the plain expand behaviour.
 

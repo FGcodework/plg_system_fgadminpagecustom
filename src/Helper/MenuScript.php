@@ -2,7 +2,7 @@
 
 /**
  * @package     plg_system_fgadminpagecustom
- * @version     1.4.1
+ * @version     1.4.2
  * @license     GNU General Public License version 2 or later
  *
  * Small admin-side script: a click on a component's parent menu item
@@ -48,7 +48,9 @@ final class MenuScript
     if (window.matchMedia && window.matchMedia('(hover: none)').matches) { return; }
 
     var a = e.target.closest('a');
-    if (!a || !a.closest(MENU) || (a.getAttribute('href') || '') !== '#') { return; }
+    if (!a || !a.closest(MENU)) { return; }
+    // Parent toggles only: Phoca uses href="#" + data-bs-toggle, Atum a.has-arrow (with a real href).
+    if (!a.classList.contains('has-arrow') && !a.hasAttribute('data-bs-toggle')) { return; }
 
     var li = a.closest('li');
     if (!li || li.querySelector(':scope > a') !== a) { return; }
