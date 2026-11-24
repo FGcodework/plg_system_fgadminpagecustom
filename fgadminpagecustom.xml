@@ -6,7 +6,7 @@
     <creationDate>2026-10</creationDate>
     <copyright>(C) 2026. GNU GPL v2 or later.</copyright>
     <license>GNU General Public License version 2 or later</license>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
     <description>PLG_SYSTEM_FGADMINPAGECUSTOM_XML_DESCRIPTION</description>
     <namespace path="src">FG\Plugin\System\AdminPageCustom</namespace>
     <updateservers>

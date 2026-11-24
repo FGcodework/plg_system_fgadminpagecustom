@@ -2,7 +2,7 @@
 
 /**
  * @package     plg_system_fgadminpagecustom
- * @version     1.4.3
+ * @version     1.4.4
  * @license     GNU General Public License version 2 or later
  *
  * Visual customization of the logged-in administrator (Atum template, Joomla 5/6):
@@ -33,7 +33,7 @@ final class AdminPageCustom extends CMSPlugin implements SubscriberInterface
 {
     /** Session key of the recovery switch. */
     /** Shown in the generated CSS comment. */
-    public const VERSION = '1.4.3';
+    public const VERSION = '1.4.4';
 
     private const SAFE_STATE = 'plg_system_fgadminpagecustom.safe';
 

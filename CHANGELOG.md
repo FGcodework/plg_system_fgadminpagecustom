@@ -1,5 +1,8 @@
 # Changelog - plg_system_fgadminpagecustom
 
+## 1.4.4 (2026-11-24)
+- CHANGE: final release. The plugin is deprecated and no longer developed; it is replaced by [FG Admin Customizer](https://github.com/FGcodework/plg_system_fgadmincustom), which takes over its settings. A notice is shown in the plugin description and settings. No functional change.
+
 ## 1.4.3 (2026-11-19)
 - FIX: "Open first submenu item" did not react in the Phoca Top Menu when the click landed on the row (the `<li>`) next to the link text instead of on the link itself. A click on the whole parent row now opens the first submenu item; clicks inside the nested submenu are left alone.
 

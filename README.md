@@ -1,3 +1,5 @@
+> **DEPRECATED.** This plugin is no longer developed. It has been replaced by **[FG Admin Customizer](https://github.com/FGcodework/plg_system_fgadmincustom)**, which combines the login page and the administrator styling in one plugin and takes over the settings of this one. This repository is archived and kept only so that existing update links keep working.
+
 <h1 align="center">FG Admin Page Customizer plugin for Joomla</h1>
 
 <p align="center">
